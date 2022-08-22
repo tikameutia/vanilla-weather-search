@@ -20,3 +20,13 @@ ul {
   max-width: 1200px;
   padding: 20px;
 }
+
+#search-city-button {
+  background-color: #c1d4db;
+  border-color: #c1d4db;
+}
+
+#search-city-button:hover {
+  opacity: 0.8;
+  transition: ease-in-out 200ms;
+}
