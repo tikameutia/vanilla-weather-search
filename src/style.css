@@ -60,3 +60,13 @@ ul {
 #temp-today {
   font-size: 50px;
 }
+
+#units {
+  font-size: 30px;
+  position: relative;
+  top: -15px;
+}
+
+#weather-desc {
+  text-transform: capitalize;
+}
