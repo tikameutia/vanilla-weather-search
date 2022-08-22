@@ -1,3 +1,43 @@
+let now = new Date();
+
+let day = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
+let month = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+document.querySelector("#hour").innerHTML = now.getHours();
+if (hour < 10) {
+  hour = `0${hour}`;
+}
+document.querySelector("#minute").innerHTML = now.getMinutes();
+if (minute < 10) {
+  minute = `0${minute}`;
+}
+
+document.querySelector("#day").innerHTML = `${day[now.getDay()]} ${date} ${
+  month[now.getMonth()]
+}`;
+
 function showTemperature(response) {
   document.querySelector("#city-name").innerHTML = response.data.name;
   document.querySelector("#temp-today").innerHTML = Math.round(
