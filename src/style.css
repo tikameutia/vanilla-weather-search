@@ -71,3 +71,7 @@ ul {
 #weather-desc {
   text-transform: capitalize;
 }
+
+#weather-container {
+  padding-top: 20px;
+}

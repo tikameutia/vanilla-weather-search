@@ -12,6 +12,7 @@ function showTemperature(response) {
 }
 
 let apiKey = "b32becf372227220ef6868c3037c0a49";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Bali&appid=${apiKey}&units=metric`;
+let city = "Ubud";
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(showTemperature);
