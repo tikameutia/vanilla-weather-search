@@ -1,5 +1,5 @@
 body {
-  background-color: #d7e9ed;
+  background: #d7e9ed;
   color: #4d5254;
   font-family: "Roboto Condensed", sans-serif;
 }
@@ -20,7 +20,7 @@ ul {
 
 .container {
   border-radius: 10px;
-  box-shadow: 2px grey;
+  border-color: black;
   background: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/044/168/original/pexels-miguel-a%CC%81-padrin%CC%83a%CC%81n-19670.jpg?1661096402)
     white;
   background-size: 100%;
@@ -36,13 +36,14 @@ ul {
 }
 
 #days-forecast {
-  background: whitesmoke;
-  border-radius: 15px;
+  background: #dadedf;
+  border-radius: 10px;
   padding: 5px;
 }
 
 #forecast-col {
   background-color: white;
+  border-radius: 10px;
   opacity: 0.8;
   padding: 20px;
 }
