@@ -35,9 +35,16 @@ ul {
   text-align: center;
 }
 
+#days-forecast {
+  background: whitesmoke;
+  border-radius: 15px;
+  padding: 5px;
+}
+
 #forecast-col {
   background-color: white;
   opacity: 0.8;
+  padding: 20px;
 }
 
 #search-city-button {
@@ -48,4 +55,8 @@ ul {
 #search-city-button:hover {
   opacity: 0.8;
   transition: ease-in-out 200ms;
+}
+
+#temp-today {
+  font-size: 50px;
 }
