@@ -9,16 +9,24 @@ ul {
   padding: 0;
 }
 
+#city-name {
+  text-align: right;
+}
+
+#country-code {
+  text-align: right;
+}
+
 .container {
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 2px grey;
   background: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/044/168/original/pexels-miguel-a%CC%81-padrin%CC%83a%CC%81n-19670.jpg?1661096402)
     white;
   background-size: 100%;
   font-family: "Roboto Condensed", sans-serif;
   margin: 10px auto;
-  max-width: 1200px;
-  padding: 20px;
+  max-width: 1000px;
+  padding: 40px;
 }
 
 #forecast-col {
@@ -34,4 +42,7 @@ ul {
 #search-city-button:hover {
   opacity: 0.8;
   transition: ease-in-out 200ms;
+}
+
+#search-city-form {
 }
