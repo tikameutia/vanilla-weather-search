@@ -21,6 +21,11 @@ ul {
   padding: 20px;
 }
 
+#forecast-col {
+  background-color: white;
+  opacity: 0.8;
+}
+
 #search-city-button {
   background-color: #c1d4db;
   border-color: #c1d4db;
