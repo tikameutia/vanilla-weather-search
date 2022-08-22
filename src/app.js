@@ -34,9 +34,11 @@ if (minute < 10) {
   minute = `0${minute}`;
 }
 
-document.querySelector("#day").innerHTML = `${day[now.getDay()]} ${date} ${
-  month[now.getMonth()]
-}`;
+document.querySelector("#day").innerHTML = `${day[now.getDay()]}`;
+
+document.querySelector("#date").innerHTML = now.getDate();
+
+document.querySelector("#month").innerHTML = `${month[now.getMonth()]}`;
 
 function showTemperature(response) {
   document.querySelector("#city-name").innerHTML = response.data.name;
