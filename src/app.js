@@ -59,8 +59,21 @@ function showTemperature(response) {
   icon.setAttribute("alt", `${response.data.weather[0].description}`);
 }
 
-let apiKey = "b32becf372227220ef6868c3037c0a49";
-let city = "Ubud";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+// search engine
 
-axios.get(apiUrl).then(showTemperature);
+function searchEngine(city) {
+  let apiKey = "b32becf372227220ef6868c3037c0a49";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemperature);
+}
+
+function handleSumbit(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#search-city-input");
+  searchEngine(cityInput.value);
+}
+
+let form = document.querySelector("#search-city-form");
+form.addEventListener("submit", handleSumbit);
+
+searchEngine("Ubud");
