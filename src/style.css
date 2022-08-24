@@ -35,10 +35,14 @@ ul {
   text-align: right;
 }
 
-#days-forecast {
+#day-forecast {
   background: #dadedf;
   border-radius: 10px;
   padding: 5px;
+}
+
+#day-forecast-today {
+  font-size: 20px;
 }
 
 #forecast-col {
@@ -60,6 +64,15 @@ ul {
 
 #temp-today {
   font-size: 50px;
+}
+
+#temp-forecast {
+  line-height: 1.5;
+}
+
+#temp-forecast-low {
+  margin-left: 5px;
+  opacity: 0.6;
 }
 
 #units {
