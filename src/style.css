@@ -10,6 +10,14 @@ ul {
   padding: 0;
 }
 
+a {
+  color: #e97859;
+}
+
+a:hover {
+  color: #1e445f;
+}
+
 .container {
   border-radius: 10px;
   box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
