@@ -50,6 +50,12 @@ ul {
   border-radius: 10px;
   opacity: 0.8;
   padding: 20px;
+  text-align: center;
+}
+
+#forecast-icon {
+  display: block;
+  margin-left: -10px;
 }
 
 #search-city-button {
