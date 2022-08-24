@@ -10,22 +10,14 @@ ul {
   padding: 0;
 }
 
-#city-name {
-  text-align: right;
-}
-
-#country-code {
-  text-align: right;
-}
-
 .container {
   border-radius: 10px;
-  border-color: black;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
   background: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/044/168/original/pexels-miguel-a%CC%81-padrin%CC%83a%CC%81n-19670.jpg?1661096402)
     white;
-  background-size: 100%;
-  margin: 20px auto;
-  max-width: 900px;
+  background-size: cover;
+  margin: 40px auto;
+  max-width: 720px;
   padding: 40px;
 }
 
@@ -33,6 +25,14 @@ ul {
   color: #4d5254;
   font-size: 14px;
   text-align: center;
+}
+
+#city-name {
+  text-align: right;
+}
+
+#country-code {
+  text-align: right;
 }
 
 #days-forecast {
