@@ -25,14 +25,16 @@ let month = [
   "December",
 ];
 
-document.querySelector("#hour").innerHTML = now.getHours();
+let hour = now.getHours();
 if (hour < 10) {
   hour = `0${hour}`;
 }
-document.querySelector("#minute").innerHTML = now.getMinutes();
+let minute = now.getMinutes();
 if (minute < 10) {
   minute = `0${minute}`;
 }
+
+document.querySelector("#time").innerHTML = `${hour}:${minute}`;
 
 document.querySelector("#day").innerHTML = `${day[now.getDay()]}`;
 
