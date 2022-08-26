@@ -65,14 +65,16 @@ function showTemperature(response) {
 
 function displayForecast() {
   let forecast = document.querySelector("#forecast");
+
   let forecastHTML = `<div class="row">`;
+
   let days = ["Sat", "Sun", "Mon", "Tue"];
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
       `
         <div class="col-2">
-          <span id="day-forecast">TUE</span>
+          <span id="day-forecast">${day}</span>
           <br />
           <img
             src="https://openweathermap.org/img/wn/10d@2x.png"
@@ -108,3 +110,4 @@ let form = document.querySelector("#search-city-form");
 form.addEventListener("submit", handleSumbit);
 
 searchEngine("Yogyakarta");
+displayForecast();
