@@ -1,3 +1,5 @@
+// time and date
+
 let now = new Date();
 
 let day = [
@@ -42,6 +44,8 @@ document.querySelector("#date").innerHTML = now.getDate();
 
 document.querySelector("#month").innerHTML = `${month[now.getMonth()]}`;
 
+//current temperature
+
 function showTemperature(response) {
   document.querySelector("#city-name").innerHTML = response.data.name;
   document.querySelector("#temp-today").innerHTML = Math.round(
@@ -59,11 +63,19 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   icon.setAttribute("alt", `${response.data.weather[0].description}`);
+
+  getForecast(response.data.coord);
 }
 
 // forecast
 
-function displayForecast() {
+function getForecast(coordinates) {
+  let apiKey = "b32becf372227220ef6868c3037c0a49";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showForecast);
+}
+
+function showForecast() {
   let forecast = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -110,4 +122,3 @@ let form = document.querySelector("#search-city-form");
 form.addEventListener("submit", handleSumbit);
 
 searchEngine("Yogyakarta");
-displayForecast();
