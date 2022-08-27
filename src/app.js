@@ -69,39 +69,55 @@ function showTemperature(response) {
 
 // forecast
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 function getForecast(coordinates) {
   let apiKey = "b32becf372227220ef6868c3037c0a49";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showForecast);
 }
 
-function showForecast() {
-  let forecast = document.querySelector("#forecast");
+function showForecast(response) {
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
 
-  let days = ["Sat", "Sun", "Mon", "Tue"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
-        <div class="col-2">
-          <span id="day-forecast">${day}</span>
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 4) {
+      forecastHTML =
+        forecastHTML +
+        `
+        <div class="col-3">
+          <span id="day-forecast">${formatDay(forecastDay.dt)}</span>
           <br />
           <img
-            src="https://openweathermap.org/img/wn/10d@2x.png"
+            src="https://openweathermap.org/img/wn/${
+              forecastDay.weather[0].icon
+            }@2x.png"
             alt="partly_cloudy"
             id="forecast-icon"
           />
           <div id="temp-forecast">
-            <span id="temp-forecast-high">23°</span>
-            <span id="temp-forecast-low">13°</span>
+            <span id="temp-forecast-high">${Math.round(
+              forecastDay.temp.max
+            )}</span>
+            <span id="temp-forecast-low">${Math.round(
+              forecastDay.temp.min
+            )}</span>
           </div>
         </div>
         `;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
-  forecast.innerHTML = forecastHTML;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 // search engine
