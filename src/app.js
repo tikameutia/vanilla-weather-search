@@ -71,7 +71,7 @@ function showTemperature(response) {
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
-  let day = date.getDay;
+  let day = date.getDay();
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   return days[day];
@@ -137,4 +137,4 @@ function handleSumbit(event) {
 let form = document.querySelector("#search-city-form");
 form.addEventListener("submit", handleSumbit);
 
-searchEngine("Yogyakarta");
+searchEngine("Amsterdam");
