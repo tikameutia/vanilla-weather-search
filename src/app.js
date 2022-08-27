@@ -107,10 +107,10 @@ function showForecast(response) {
           <div id="temp-forecast">
             <span id="temp-forecast-high">${Math.round(
               forecastDay.temp.max
-            )}</span>
+            )}°</span>
             <span id="temp-forecast-low">${Math.round(
               forecastDay.temp.min
-            )}</span>
+            )}°</span>
           </div>
         </div>
         `;
@@ -137,4 +137,4 @@ function handleSumbit(event) {
 let form = document.querySelector("#search-city-form");
 form.addEventListener("submit", handleSumbit);
 
-searchEngine("Amsterdam");
+searchEngine("Mojokerto");
