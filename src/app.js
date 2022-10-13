@@ -137,4 +137,4 @@ function handleSumbit(event) {
 let form = document.querySelector("#search-city-form");
 form.addEventListener("submit", handleSumbit);
 
-searchEngine("Mojokerto");
+searchEngine("Amsterdam");

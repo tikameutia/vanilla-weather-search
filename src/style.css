@@ -12,6 +12,7 @@ ul {
 
 a {
   color: #e97859;
+  text-decoration: none;
 }
 
 a:hover {
@@ -23,7 +24,7 @@ a:hover {
   box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
   background: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/044/382/original/pexels-johannes-plenio-1103970.jpg?1661344718);
   background-size: cover;
-  margin: 40px auto;
+  margin: 20px auto;
   max-width: 720px;
   padding: 40px;
   opacity: 0.9;
@@ -100,4 +101,24 @@ a:hover {
 
 #weather-container {
   padding-top: 20px;
+}
+
+@media (max-width: 760px) {
+  body {
+    text-align: center;
+  }
+
+  h1 {
+    font-weight: 900;
+    line-height: 1.5;
+    margin-top: 20px;
+  }
+
+  #city-name {
+    text-align: center;
+  }
+
+  .container {
+    max-width: 300px;
+  }
 }
