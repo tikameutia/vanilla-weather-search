@@ -101,7 +101,7 @@ function showForecast(response) {
             src="https://openweathermap.org/img/wn/${
               forecastDay.weather[0].icon
             }@2x.png"
-            alt="partly_cloudy"
+            alt=""
             id="forecast-icon"
           />
           <div id="temp-forecast">
