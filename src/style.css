@@ -121,4 +121,21 @@ a:hover {
   .container {
     max-width: 300px;
   }
+
+  #day-forecast-today,
+  #day-forecast,
+  #temp-forecast,
+  #temp-today,
+  #units {
+    font-size: 12px;
+  }
+
+  #forecast-icon,
+  #icon {
+    max-width: 50px;
+  }
+
+  #forecast-col {
+    padding: 10px;
+  }
 }
