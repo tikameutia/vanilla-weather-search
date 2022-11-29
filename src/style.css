@@ -138,4 +138,8 @@ a:hover {
   #forecast-col {
     padding: 10px;
   }
+
+  #weather-today {
+    padding: 0;
+  }
 }
