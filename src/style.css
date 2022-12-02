@@ -121,6 +121,7 @@ a:hover {
   .container {
     max-width: 300px;
   }
+<<<<<<< HEAD
 
   #day-forecast-today,
   #day-forecast,
@@ -142,4 +143,6 @@ a:hover {
   #weather-today {
     padding: 0;
   }
+=======
+>>>>>>> parent of f4ab4b6 (Updated media query)
 }
